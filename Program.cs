@@ -1,9 +1,12 @@
-using LeleLoves.Models;
 
 using Microsoft.EntityFrameworkCore;
 
+using LeleLoves.Models;
+using LeleLove.Implementations;
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddTransient<EFUsuarioRepository, EFUsuarioRepository>();
 
 builder.Services.AddDbContext<LeleLovesDbContext>(
     options => options.UseSqlServer(
@@ -15,5 +18,7 @@ builder.Services.AddDbContext<LeleLovesDbContext>(
 
 // builder.Services.
 var app = builder.Build();
+
+app.ConfigureUsuarioEndPoints();
 
 app.Run();
