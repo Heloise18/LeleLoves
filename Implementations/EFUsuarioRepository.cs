@@ -18,4 +18,4 @@ public class EFUsuarioRepository(LeleLovesDbContext ctx) : IUserRepository
        return await ctx.Users
         .FirstOrDefaultAsync(u => u.Id == id);
     }
-}
+} 

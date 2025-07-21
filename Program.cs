@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 using LeleLoves.Models;
 using LeleLoves.Services;
+using LeleLove.Implementations;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,8 +16,8 @@ builder.Services.AddDbContext<LeleLovesDbContext>(
 );
 
 
-// builder.Services.AddTransient<IUserRepository, >();
-// builder.Services.AddTransient<ILikeRepository, >();
+builder.Services.AddTransient<IUserRepository, EFUsuarioRepository>();
+builder.Services.AddTransient<ILikeRepository, EfLikeRepository>();
 
 
 var app = builder.Build();
