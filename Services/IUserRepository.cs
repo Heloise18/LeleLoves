@@ -4,8 +4,8 @@ namespace LeleLoves.Services;
 
 public interface IUserRepository
 {
-    Task<User> Create(Guid Id, string Password);
-    Task<User> Search(Guid id);
+    Task<Guid?> Create(string name, string password);
+    Task<User?> Search(Guid id);
 
 
 }
