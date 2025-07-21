@@ -5,7 +5,7 @@ namespace LeleLoves.Services;
 public interface ILikeRepository
 {
     Task<Like> Like(Guid UserLikedID, Guid UserID);
-    Task<Like> Match(User UserLiked, User User);
+    Task<Like> Match(Guid UserLikedID, Guid UserID);
     Task<Like> Delete(Guid ID);
     
 }
