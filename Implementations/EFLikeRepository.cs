@@ -7,7 +7,7 @@ public class EfLikeRepository(LeleLovesDbContext ctx) : ILikeRepository
 {
     public Task<Like> Delete(Guid ID)
     {
-        
+        throw new NotImplementedException();
     }
 
     public async Task<Like> Like(Guid UserLikedID, Guid UserID)
@@ -25,7 +25,11 @@ public class EfLikeRepository(LeleLovesDbContext ctx) : ILikeRepository
 
     public async Task<bool> Match(Guid UserLikedID, Guid UserID)
     {
-       
-        ctx.
+        throw new NotImplementedException();
+    }
+
+    public Task<Like> Match(User UserLiked, User User)
+    {
+        throw new NotImplementedException();
     }
 }
