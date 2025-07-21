@@ -3,6 +3,6 @@ namespace LeleLoves.Services;
 
 public interface ILikeRepository
 {
-    
+
 }
 
