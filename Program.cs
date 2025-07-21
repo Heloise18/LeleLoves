@@ -6,6 +6,7 @@ using LeleLoves.Models;
 using LeleLove.EndPoints;
 
 using LeleLoves.Services;
+using LeleLove.Implementations;
 
 
 
@@ -19,8 +20,8 @@ builder.Services.AddDbContext<LeleLovesDbContext>(
 );
 
 
-// builder.Services.AddTransient<IUserRepository, >();
-// builder.Services.AddTransient<ILikeRepository, >();
+builder.Services.AddTransient<IUserRepository, EFUsuarioRepository>();
+builder.Services.AddTransient<ILikeRepository, EfLikeRepository>();
 
 
 var app = builder.Build();
