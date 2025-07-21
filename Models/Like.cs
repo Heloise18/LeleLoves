@@ -2,8 +2,10 @@ namespace LeleLoves.Models;
 
 public class Like
 {
-    public Guid IDlike { get; set; }
-    public bool Liked { get; set; } = false;
-    public Guid IdUser { get; }
-    List<User> UserLiked = [];
+    public Guid ID { get; set; }
+    public Guid UserID { get; set; }
+    public Guid UserLikedID { get; set; }
+    
+    public User User { get; set; }
+    public User UserLiked { get; set; }
 }

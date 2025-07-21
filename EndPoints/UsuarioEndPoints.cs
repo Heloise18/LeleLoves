@@ -1,6 +1,6 @@
-namespace LeleLove.EndPoints;
+// namespace LeleLove.EndPoints;
 
-public static class UsuarioEndpoints
-{
-    public static void ConfigureUsuarioEndPoints
-} 
+// public static class UsuarioEndpoints
+// {
+//     public static void ConfigureUsuarioEndPoints
+// } 
