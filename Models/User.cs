@@ -1,12 +1,12 @@
 namespace LeleLoves.Models;
 
-public class User(string name, string password)
+public class User
 {
     public Guid Id { get; set; }
-    public string Username { get; set; } = name;
+    public string Username { get; set; }
     public string Bio { get; set; }
     public string? Description { get; set; }
-    public string Password { get; set; } = password;
+    public string Password { get; set; }
     public ICollection<Like> Likes { get; set; } = [];
     public ICollection<Like> ReceivedLikes { get; set; } = [];
     

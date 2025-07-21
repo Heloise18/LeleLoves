@@ -5,12 +5,15 @@ namespace LeleLove.Implementations;
 
 public class EFUsuarioRepository(LeleLovesDbContext ctx) : IUserRepository
 {
-    public async Task<Guid?> Create(string name, string password)
+    public async Task Create(User user)
     {
-        var usuario = new User(name, password);
-        ctx.Users.Add(usuario);
+        ctx.Users.Add(user);
         await ctx.SaveChangesAsync();
-        return usuario.Id;
+    }
+
+    public async Task<Guid?> Login(string name, string password)
+    {
+        throw new Exception();
     }
 
     public async Task<User?> Search(Guid id)

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 using LeleLoves.Models;
+using LeleLove.EndPoints;
 
 
 var builder = WebApplication.CreateBuilder(args);
